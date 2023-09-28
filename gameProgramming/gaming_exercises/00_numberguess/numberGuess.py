@@ -79,5 +79,5 @@ while playerScore != 3 and cpuScore != 3:
 if playerScore >= 3:
     print("You won three rounds, so ya win i guess\n")
 else:
-    print("Hey scrub you lost, try again nerd\n")
+    print("Hey scrub you lost, try again\n")
 
