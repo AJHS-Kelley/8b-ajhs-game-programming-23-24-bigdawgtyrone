@@ -20,13 +20,13 @@ secretNumber = -1
 playerScore = 0
 cpuScore = 0
 numGuesses = 0
-playerName = "borgir"
+playerName = ""
 playerGuess = -1
 rangeMin = -1
 rangeMax = -1
 numAttempts= 3
 #Difficultys
-difficulty = "easy, hard, scream"
+difficulty = "easy, medium, scream"
 
 print("""
         *----------------------------*
@@ -38,7 +38,7 @@ print("""
         *----------------------------*
     
        """)
-
+       
 playerName = input("What should I call you?\nType your name and press enter.\n")
 # VERIFY INPUT WHENEVER POSSIBLE
 print(f"you want me to call you {playerName}.  Is that correct?")
@@ -48,8 +48,22 @@ if isCorrect == "yes":
 else:
     playerName = input("What should i call you?\nType your name and press enter.\n")
 
+#DIFFICULTY
+difficulty = input("Which difficulty would you like to play?\nChoose either easy, medium, or scream.\n")
+print(f"You want to play {difficulty}.  Is that correct?")
+isCorrect = input("Please type yes if correct, no if not correct.\n")
+if difficulty == "easy":
+    print(f"alright {playerName}.  Initiating easy difficulty...")
+
+
+
+
+
+
+
 # PLAYER GUESS
 print("you need to guess a number from 0 to 20. you have three guesses!\n")
+
 
 while playerScore != 3 and cpuScore != 3:
     #pass Tells python to skip this block without giving an error.
