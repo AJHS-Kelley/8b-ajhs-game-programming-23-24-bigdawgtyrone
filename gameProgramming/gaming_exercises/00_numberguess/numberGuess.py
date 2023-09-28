@@ -44,8 +44,8 @@ print("""
 secretNumber = random.randint(1 , 10)
 secretNumberI = random.randint(1 , 30)
 secretNumberII = random.randint(1 , 1000)
-print(secretNumber)
-
+print(secretNumber) # Remove this line, otherwise the player will see the secretNumber.  
+# NO DIFFICULTY CODE IMPLEMENTED CORRECTLY. 
 print("you need to guess a number from 0 to 20 and you have 3 guesses.\nif you guess it right, you gain a point. if you guess it wrong within all four guesses, CPU gains a point. first to three points win")
 
 # print() an explanation of your three difficulty levels.
@@ -65,6 +65,9 @@ while playerScore != 3 and cpuScore != 3: # START THE MATCH (GAME)
         # int() will convert to an INTEGER
         # float() will vonvert to a FLOAT
         print(f"you have chosen {playerGuess}. Let's see if you're right!\n")
+    # Your code is not indented correctly, which causes error with scope. 
+    # The game is not correctly identifying a matching guess.  It does not indicate high/low for incorrect guess.
+    # Due to these errors, the player is never awarded a point.  
     if playerGuess == secretNumber:
         playerScore += 1
         print("woah scrub, you guessed it\n")
