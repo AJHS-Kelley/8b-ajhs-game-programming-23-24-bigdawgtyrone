@@ -26,7 +26,7 @@ rangeMin = -1
 rangeMax = -1
 numAttempts= 3
 #Difficultys
-difficulty = "easy, medium, scream"
+difficulty = ""
 
 print("""
         *----------------------------*
@@ -48,30 +48,45 @@ if isCorrect == "yes":
 else:
     playerName = input("What should i call you?\nType your name and press enter.\n")
 
-#DIFFICULTY
-difficulty = input("Which difficulty would you like to play?\nChoose either easy, medium, or scream.\n")
+#DIFFICULTY (easy)
+difficulty = input("Which difficulty would you like to play?\nChoose either easy, hard, or scream.\n")
 print(f"You want to play {difficulty}.  Is that correct?")
 isCorrect = input("Please type yes if correct, no if not correct.\n")
 if difficulty == "easy":
+    rangeMin = -1
+    rangeMax = 10
+    numAttempts= 3
     print(f"alright {playerName}.  Initiating easy difficulty...")
+    print("you need to guess a number from 0 to 10. you have three guesses!\n")
+elif difficulty == "hard":
+    rangeMin = -1
+    rangeMax = 30
+    numAttempts= 3
+    print(f"alright {playerName}.  Initiating hard difficulty...")
+    print("you need to guess a number from 0 to 30. you have three guesses!\n")
+elif difficulty == "scream":
+    rangeMin = -1
+    rangeMax = 50
+    numAttempts= 1
+    print(f"alright {playerName}.  Initiating scream...")
+    print("you need to guess a number from 0 to 50. you have three guesses...\n")
+    print("good luck...")
 
 
 
 
-
-
-
-# PLAYER GUESS
-print("you need to guess a number from 0 to 20. you have three guesses!\n")
-
-
+  
 while playerScore != 3 and cpuScore != 3:
+    
+    
+    
+    
     #pass Tells python to skip this block without giving an error.
-    secretNumber = random.randint(0, 20) # INCLUSIVE
+    secretNumber = random.randint(rangeMin, rangeMax) # INCLUSIVE
     #print (secretNumber)
     print(f"player Score: {playerScore}\nCPU Score: {cpuScore}\n")
     numGuesses = 0
-    for guesses in range(4):
+    for guesses in range(3):
         print(f"you have {3 - numGuesses} guesses left this round!")
         playerGuess = int(input("Think of your number, type it in and then push ENTER.\n"))
         # int() converts whatever is input into an integer
@@ -94,4 +109,6 @@ if playerScore >= 3:
     print("You won three rounds, so ya win i guess\n")
 else:
     print("Hey scrub you lost, try again\n")
+
+
 
