@@ -1,0 +1,53 @@
+#playerInventory = [] 
+
+#while len(playerInventory) < 10:
+    #item = input("What item do you want to add to the inventory?\n")
+    #playerInventory.append(item)
+
+#playerInventory.sort()
+#print(playerInventory)
+
+#while len(playerInventory) > 5:
+    #item = input("What item do you want to remove from the inventory?\n")
+    #playerInventory.remove(item)
+
+#playerInventory.sort()
+#print(playerInventory)
+
+# """ doorKeys = [
+#     "red",
+#     "green",
+#     "yellow",
+#     "purple",
+#     "brown"
+# ]
+
+# key = input("Which color key do you need to unlock the door?\n")
+
+# if key in doorKeys:
+#     print("you have the key!. The door is now unlocked.\n")
+# else:
+#     print("wrong key. The door remains locked.\n") """
+
+weaponList = [
+    True, #handgun
+    False, #stungun
+    False, #pulse rifle
+    False, #energy sword
+    True #tactical shotgun
+]
+
+weaponNum = 0
+while weaponNum < len(weaponList):
+    if weaponNum == 0 and weaponList[0] == True:
+        print("here is your common handgun.\n")
+    if weaponNum == 1 and weaponList[1] == False:
+        print("you don't have that.\n")
+    if weaponNum == 2 and weaponList[2] == False:
+        print("You don't have that.\n")
+    if weaponNum == 3 and weaponList[3] == False:
+        print("You don't have that.\n")
+    if weaponNum == 4 and weaponList[4] == True:
+        print("here is your tactical shotgun.\n")
+    weaponNum += 1
+
