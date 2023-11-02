@@ -91,4 +91,19 @@ def getGuess(alreadyGuessed):
 def playAgain()
     print('want to play again? ya or nah')
     return input().lower().startswith('y')
-    
+
+# Introduce the game
+print('Welcome to hang the man'-'')
+missedLetters = ''
+correctLetters = ''
+secretWord = getRandomWord(words)
+gameIsDone = False
+
+#Main Game Loops
+while True:
+    displayBoard(missedLetters, correctLetters, secretWord)
+
+    guess = getGuess(missedLetters + correctLetters)
+    if guess in secretWord:
+        correctLetters = correctLetters + guess
+        
