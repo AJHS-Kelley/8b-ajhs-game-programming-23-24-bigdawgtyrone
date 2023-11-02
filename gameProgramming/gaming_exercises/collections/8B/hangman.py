@@ -81,11 +81,14 @@ def getGuess(alreadyGuessed):
         guess = guess.lower()
         if len(guess) != 1:
             print("PLease enter a single letter!!!.")
-        elif guess in areadyGuessed:
+        elif guess in alreadyGuessed:
                 print('You guessed that already bozo, pick another letter.')
-        elif guess not in 'abcdefghijklmnopqrstuvwxyz'
+        elif guess not in 'abcdefghijklmnopqrstuvwxyz':
                 print('Please guess a letter from the english alphabet broseph')
         else:
             return guess
 
-                  
+def playAgain()
+    print('want to play again? ya or nah')
+    return input().lower().startswith('y')
+    
