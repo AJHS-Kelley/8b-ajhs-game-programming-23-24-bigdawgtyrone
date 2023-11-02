@@ -88,12 +88,12 @@ def getGuess(alreadyGuessed):
         else:
             return guess
 
-def playAgain()
+def playAgain():
     print('want to play again? ya or nah')
     return input().lower().startswith('y')
 
 # Introduce the game
-print('Welcome to hang the man'-'')
+print('Welcome to hang the man')
 missedLetters = ''
 correctLetters = ''
 secretWord = getRandomWord(words)
@@ -106,4 +106,30 @@ while True:
     guess = getGuess(missedLetters + correctLetters)
     if guess in secretWord:
         correctLetters = correctLetters + guess
-        
+
+        # Check To See If Winner, Winner Chicken Dinner
+        foundAllLetters = True
+        for i in range(len(secretWord)):
+            if secretWord[i] not in correctLetters:
+                foundAllLetters = False
+                break
+            if foundAllLetters: # if True:
+                print('Nice job kid, maybe you should play again')
+                print('The secret word was' + secretWord)
+                gameIsDone = True
+    else:  
+        missedLetters = missedLetters + guess
+        if len(missedLetters) == len(HANGMAN_BOARD) - 1:
+            displayBoard(missedLetters, correctLetters, secretWord)
+            print('You have run out of guesses and lost the game')
+            print('you made this number of correct guesses ' +str(len(correctLetters)))
+            print('The secret word was' + secretWord)
+            gameIsDone = True
+            
+    if gameIsDone:
+        if playAgain():
+            missedLetters = ''
+            correctLetters = ''
+            gameIsDone = FalsesecretWord = getRandomWord(words)
+        else:
+            break
