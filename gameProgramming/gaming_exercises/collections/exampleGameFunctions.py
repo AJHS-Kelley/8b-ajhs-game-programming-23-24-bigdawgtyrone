@@ -34,7 +34,9 @@ def powerPunch(speed, power, target):
     print('Where do you want to hit your opponent?\n')
 powerPunch = input('Type "head" or "body" then press Enter')
 
-
+# Tip for if you want a word to be input without being breakable, set a loop that says that if a certain word isnt in then keep it in the loop
+# if you have specific word capitals then put in .upper or .lower to conver the word to all lowercase or all uppder case
+# If you want different wording to pop up at different places, you have to put them in order or in function calling you want first for them to print in that order
 playerName = input("What's your fighter name?\nType it here then press enter.\n")
 print(f"you want to be called {playerName}.  that Right?")
 isCorrect = input("Please type yes if correct, no if not correct.\n")
