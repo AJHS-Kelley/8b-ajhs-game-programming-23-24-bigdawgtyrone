@@ -20,11 +20,11 @@ def powerPunch(speed, power, target):
     if power >= 9 and speed >= 6 and target == head:
         knockDown = True
         knockOut = True
-    print('You landed a perfect punch and knocked your opponent out!')
+        print('You landed a perfect punch and knocked your opponent out!')
     elif power >= 7 and speed >= 6 and target == head:
         knockDown = True
         print('You have knocked your opponent down!')
-    else
+    else:
         knockDown = False
         print('You did not land your power punch.')
         
