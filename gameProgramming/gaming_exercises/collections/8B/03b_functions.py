@@ -27,7 +27,7 @@ def rollDice(numDice, sizeDice):
         sum += roll
         print(f"Roll: {roll}\n")
         numRolled += 1
-        return sum #return will IMMEDIATELY exit a loop, function if/elif/else block.
+    return sum #return will IMMEDIATELY exit a loop, function if/elif/else block.
         
 rollDice(3,6)
 # rollDice(1,20)
