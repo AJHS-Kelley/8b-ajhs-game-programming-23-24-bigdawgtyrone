@@ -33,7 +33,7 @@ def powerPunch(speed, power, target):
 playerName = input("What's your fighter name?\nType it here then press enter.\n")
 print(f"you want to be called {playerName}.  that Right?")
 isCorrect = input("Please type yes if correct, no if not correct.\n")
-if isCorrect == "yes":
+if isCorrect == "yes": 
     print(f"ok {playerName}, let's get started\n")
 else:
     playerName = input("what's your fighter name?\nType your name then press enter.\n")
@@ -63,7 +63,7 @@ elif powerPunch == 'body':
     print(health)
     print("It's now your opponents turn")
 else:
-    print('You didnt commit to the punch and missed')
+    print('You didnt commit to the punch and threw a low blow')
     print('This is your opponents current health')
     print(health)
     print("It's now your opponents turn")
