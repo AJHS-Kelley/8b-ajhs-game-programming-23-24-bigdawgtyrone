@@ -24,4 +24,22 @@ def genDNA() -> str :
     return dnaSequence
 
 dna = genDNA()
-print(dna)
+# print(dna)
+
+def genRNA(dnaSequence: str) -> tuple:
+    print(f"the DNA Sequence is {dnaSequence}.\n")
+    print("you will now generate the RNA sequence that would match.\n")
+    print("Please remember, in the RNA sequence U pairs with A from the DNA sequence.\n")
+    rnaStart = time.time()
+    rnaSequence = input("Please enter the matchine RNA sequence. Leave no spaces! Then press ENTER.\n")
+    rnaStop = time.time()
+    rnaTime = rnaStop - rnaStart
+
+    return (rnaSequence, rnaTime)
+    # Tuples are ORDERED -- you can reference elements with the index
+    # Tuples are UNCHANGEABLE -- you cannot add, modify, or delete after creating
+    # tuples CAN have duplicate values.
+
+rna = genRNA(dna)
+print(rna)
+
