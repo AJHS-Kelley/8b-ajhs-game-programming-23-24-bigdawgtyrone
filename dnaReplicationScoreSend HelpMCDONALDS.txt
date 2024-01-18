@@ -1,0 +1,6 @@
+DNA Sequence: GGA
+RNA Sequence: CCT
+Transcription Time: 11.895495176315308
+Score: 500000.0
+Send HelpMCDONALDS
+2024-01-18 14:35:39.668368

@@ -1,0 +1,5 @@
+DNA Sequence: A
+RNA Sequence: T
+Transcription Time: 1.4394745826721191
+Score: 9e+23
+christian ortiz4

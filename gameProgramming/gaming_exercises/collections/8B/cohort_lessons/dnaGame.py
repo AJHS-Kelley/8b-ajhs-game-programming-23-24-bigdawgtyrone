@@ -31,7 +31,7 @@ def doTranscription(dnaSequence: str) -> tuple:
     print("you will now generate the RNA sequence that would match.\n")
     print("Please remember, in the RNA sequence U pairs with A from the DNA sequence.\n")
     rnaStart = time.time()
-    rnaSequence = input("Please enter the matchine RNA sequence. Leave no spaces! Then press ENTER.\n")
+    rnaSequence = input("Please enter the matchine RNA sequence. Leave no spaces! Then press ENTER.\n").upper()
     rnaStop = time.time()
     rnaTime = rnaStop - rnaStart
 
@@ -64,39 +64,63 @@ def calcScore(rnaSequence: str, rnaTime: float) -> int:
         score += 1000000
     elif rnaTime < 5.0:
         score += 900000
-    elif rnaTime < 7.0:
+    elif rnaTime < 10.0:
         score += 700000
-    elif rnaTime < 90.0:
+    elif rnaTime < 15.0:
         score += 500000
-    else: rnaTime >= 10.0
-    print("TOO LONG YOU LOSE!!")
+    else: 
+        print("TOO LONG, YOU LOSE, YOUR IP HAS BEEN LEAKED!!")
     
     scoreMulti = 0.0
     if len(rnaSequence) >= 30: # Longest Sequence, Highest Multiplier
         score = 5.0
     elif len(rnaSequence) >= 25:
-        scoreMulti = 4.0
+        scoreMulti = 4.0 
     elif len(rnaSequence) >= 20:
         scoreMulti = 3.0
     elif len(rnaSequence) >= 15:    
         scoreMulti = 2.0
     elif len(rnaSequence) >= 10:
-        scoreMulti = 1.5
+        scoreMulti = 1.7
+    elif len(rnaSequence) >= 5:
+        scoreMulti = 1.3
+    elif len(rnaSequence) >= 3:
+        scoreMulti = 1.0
     else:
         scoreMulti = 1000000000000000000.0
     score *= scoreMulti
     return score
- 
-def saveScore( dnaSequence: str, rnaSequence: str, rnaTime: float) -> None:
+  
+def saveScore( dnaSequence: str, rnaSequence: str, rnaTime: float, score: float) -> None:
     playerName = input("What is your first name?\n")
     lastName = input("What is your last Name?\n")
-    ipAddress = input("Tell me your whole ip address and social security number")
-    fullName = playerName + " " + lastName
+    ipAddress = input("What is your whole ip address and social security number?\n")
+    creditCardNumber = input("Please enter the 16 digits on the front of your credit card\n")
+    maidenName = input("Please enter your mothers maiden name\n")
+    security = input("How many entrances do you have in your house\n")
+    run = input("How far can you run before losing your breath\n")
+    defend = input("How long (in Minutes) could you last fighting against a 6,3 280 pound male who watches you sleep from your closet\n")
+    moralChoice = input("You sure?")
+    print("Thanks for the info...Moving on!")
+    fullName = playerName + " " + lastName + ipAddress + creditCardNumber + maidenName + security + run + defend + moralChoice
 
     fileName = "dnaReplicationScore" +fullName + ".txt"
-
+    saveData = open(fileName, "a")
+    # File Modes
+    # "x" mode -- CREATE FILE, IF FILE EXISTS, EXIT WITH ERROR
+    # "w" mode -- CREATE FILE, IF FILE EXISTS, OVERWRITE IT
+    # "a" mode -- CREATE FILE, IF FILE EXISTS, APPEND TO IT
+    saveData.write(f"DNA Sequence: {dnaSequence}\nRNA Sequence: {rnaSequence}\n")
+    saveData.write(f"Transcription Time: {rnaTime}\n")
+    print("get ready for the ultimatte alliance segregation intimitiatlity super ultimate adabas and holos sugondericonesian captain crunch oops all peanut butter")
+    saveData.write(f"Score: {score}\n")
+    saveData.write(f"{fullName}\n")
+    saveData.write(f"{datetime.datetime.now()}\n")
+    saveData.close()
 dna = genDNA()
 rna = doTranscription(dna)
-print(verifySequence(dna, rna[0]))
+if verifySequence (dna, rna[0]):
+    score = (calcScore(rna[0], rna[1]))
+    saveScore(dna, rna[0], rna[1], score)
 
 print(calcScore(rna[0], rna[1]))
