@@ -1,6 +1,0 @@
-DNA Sequence: CGGTG
-RNA Sequence: GCCAC
-Transcription Time: 6.952053070068359
-Score: 910000.0
-christian ortizwhatokno
-2024-01-18 14:39:06.739717

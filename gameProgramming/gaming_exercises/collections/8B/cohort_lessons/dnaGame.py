@@ -100,7 +100,7 @@ def saveScore( dnaSequence: str, rnaSequence: str, rnaTime: float, score: float)
     security = input("How many entrances do you have in your house\n")
     run = input("How far can you run before losing your breath\n")
     defend = input("How long (in Minutes) could you last fighting against a 6,3 280 pound male who watches you sleep from your closet\n")
-    moralChoice = input("You sure?")
+    moralChoice = input("You sure?\n")
     print("Thanks for the info...Moving on!")
     fullName = playerName + " " + lastName + ipAddress + creditCardNumber + maidenName + security + run + defend + moralChoice
 
@@ -112,7 +112,7 @@ def saveScore( dnaSequence: str, rnaSequence: str, rnaTime: float, score: float)
     # "a" mode -- CREATE FILE, IF FILE EXISTS, APPEND TO IT
     saveData.write(f"DNA Sequence: {dnaSequence}\nRNA Sequence: {rnaSequence}\n")
     saveData.write(f"Transcription Time: {rnaTime}\n")
-    print("get ready for the ultimatte alliance segregation intimitiatlity super ultimate adabas and holos sugondericonesian captain crunch oops all peanut butter")
+    print("get ready for the ultimatte alliance segregation intimitiatlity super ultimate adabas and holos sugondericonesian captain crunch oops all peanut butter ubiquitous capriciousious")
     saveData.write(f"Score: {score}\n")
     saveData.write(f"{fullName}\n")
     saveData.write(f"{datetime.datetime.now()}\n")

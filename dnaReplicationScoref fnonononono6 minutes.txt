@@ -1,6 +1,0 @@
-DNA Sequence: ATTCCG
-RNA Sequence: TAAGGC
-Transcription Time: 7.152368545532227
-Score: 910000.0
-f fnonononono6 minutes
-2024-01-18 14:44:31.026622

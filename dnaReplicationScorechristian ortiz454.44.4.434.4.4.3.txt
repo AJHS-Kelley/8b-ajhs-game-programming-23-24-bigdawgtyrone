@@ -1,5 +1,0 @@
-DNA Sequence: AA
-RNA Sequence: TT
-Transcription Time: 2.819627523422241
-Score: 9e+23
-christian ortiz454.44.4.434.4.4.3
