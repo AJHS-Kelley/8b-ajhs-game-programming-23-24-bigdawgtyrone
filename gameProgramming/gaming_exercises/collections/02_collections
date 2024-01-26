@@ -14,13 +14,13 @@
 #playerInventory.sort()
 #print(playerInventory)
 
-# """ doorKeys = [
-#     "red",
-#     "green",
-#     "yellow",
-#     "purple",
-#     "brown"
-# ]
+""" doorKeys = [
+    "red",
+    "green",
+    "yellow",
+    "purple",
+    "brown"
+]
 
 # key = input("Which color key do you need to unlock the door?\n")
 
