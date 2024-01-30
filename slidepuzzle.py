@@ -9,10 +9,10 @@ from pygame.locals import *
 # Create the constants (go ahead and experiment with different values)
 BOARDWIDTH = 4  # number of columns in the board
 BOARDHEIGHT = 4 # number of rows in the board
-TILESIZE = 80
-WINDOWWIDTH = 640
+TILESIZE = 60
+WINDOWWIDTH = 600
 WINDOWHEIGHT = 480
-FPS = 30
+FPS = 20
 BLANK = None
 
 #                 R    G    B
@@ -20,13 +20,14 @@ BLACK =         (  0,   0,   0)
 WHITE =         (255, 255, 255)
 BRIGHTBLUE =    (  0,  50, 255)
 DARKTURQUOISE = (  3,  54,  73)
-GREEN =         (  0, 204,   0)
+GREEN =         (248, 252, 3)
+SUS = (252, 19, 3)
 
-BGCOLOR = DARKTURQUOISE
-TILECOLOR = GREEN
-TEXTCOLOR = WHITE
-BORDERCOLOR = BRIGHTBLUE
-BASICFONTSIZE = 20
+BGCOLOR = SUS
+TILECOLOR = SUS
+TEXTCOLOR = GREEN
+BORDERCOLOR = SUS
+BASICFONTSIZE = 50
 
 BUTTONCOLOR = WHITE
 BUTTONTEXTCOLOR = BLACK
