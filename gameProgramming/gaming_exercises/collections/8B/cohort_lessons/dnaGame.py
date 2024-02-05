@@ -123,4 +123,4 @@ if verifySequence (dna, rna[0]):
     score = (calcScore(rna[0], rna[1]))
     saveScore(dna, rna[0], rna[1], score)
 
-print(calcScore(rna[0], rna[1]))
+print(calcScore(rna[0], rna[1])) 
