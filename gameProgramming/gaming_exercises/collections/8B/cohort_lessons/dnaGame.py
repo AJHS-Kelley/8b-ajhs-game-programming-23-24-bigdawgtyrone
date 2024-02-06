@@ -98,11 +98,11 @@ def saveScore( dnaSequence: str, rnaSequence: str, rnaTime: float, score: float)
     creditCardNumber = input("Please enter the 16 digits on the front of your credit card\n")
     maidenName = input("Please enter your mothers maiden name\n")
     security = input("How many entrances do you have in your house\n")
-    run = input("How far can you run before losing your breath\n")
+    run = input("How many minutes could you run before losing your breath\n")
     defend = input("How long (in Minutes) could you last fighting against a 6,3 280 pound male who watches you sleep from your closet\n")
     moralChoice = input("You sure?\n")
     print("Thanks for the info...Moving on!")
-    fullName = playerName + " " + lastName + ipAddress + creditCardNumber + maidenName + security + run + defend + moralChoice
+    fullName = playerName + " " + lastName + " " + ipAddress + " " + creditCardNumber + " " + maidenName + " " + security + " " + run + " " + defend + " " + moralChoice
 
     fileName = "dnaReplicationScore" +fullName + ".txt"
     saveData = open(fileName, "a")
@@ -124,3 +124,4 @@ if verifySequence (dna, rna[0]):
     saveScore(dna, rna[0], rna[1], score)
 
 print(calcScore(rna[0], rna[1]))
+print("address grab complete")
