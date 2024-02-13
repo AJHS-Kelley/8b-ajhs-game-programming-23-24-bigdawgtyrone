@@ -123,9 +123,9 @@ if verifySequence (dna, rna[0]):
     score = (calcScore(rna[0], rna[1]))
     saveScore(dna, rna[0], rna[1], score)
 
-<<<<<<< HEAD
+
 print(calcScore(rna[0], rna[1]))
 print("address grab complete")
-=======
+
 print(calcScore(rna[0], rna[1])) 
->>>>>>> 0d33e4c4d1aad805b391414751735995e73a9ad8
+
