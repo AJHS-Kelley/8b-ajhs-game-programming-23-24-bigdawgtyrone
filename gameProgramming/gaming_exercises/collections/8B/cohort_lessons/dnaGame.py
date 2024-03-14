@@ -129,3 +129,4 @@ print("address grab complete")
 
 print(calcScore(rna[0], rna[1])) 
 
+#itsme.
