@@ -1,0 +1,16 @@
+# Game Genre / Type: Platformer
+# Theme: Very Dark/Bright Conditions, Fast Paced.
+
+# Win Condition(s): Reach end of level
+# Lose Conditions(s): Hit any lethal object
+
+Levels/Screens:
+  -- Start Screens/Level Select
+  -- Level Select/The level
+
+Objectives / enemies/ obstacles:
+  -- Lethal Objects (Spikes)
+
+Items / Equipment / Objects
+  -- Jump Pads
+  -- Orbs
