@@ -14,3 +14,6 @@ Objectives / enemies/ obstacles:
 Items / Equipment / Objects
   -- Jump Pads
   -- Orbs
+
+Controls
+  --
