@@ -16,4 +16,5 @@ Items / Equipment / Objects
   -- Orbs
 
 Controls
-  --
+  -- Tap To Jump
+  -- Hold To Fly
