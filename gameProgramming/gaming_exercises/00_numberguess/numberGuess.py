@@ -48,7 +48,7 @@ if isCorrect == "yes":
 else:
     playerName = input("What should i call you?\nType your name and press enter.\n")
 
-#DIFFICULTY (easy)
+#DIFFICULTY (easy, hard, scream)
 difficulty = input("Which difficulty would you like to play?\nChoose either easy, hard, or scream.\n")
 print(f"You want to play {difficulty}.  Is that correct?")
 isCorrect = input("Please type yes if correct, no if not correct.\n")

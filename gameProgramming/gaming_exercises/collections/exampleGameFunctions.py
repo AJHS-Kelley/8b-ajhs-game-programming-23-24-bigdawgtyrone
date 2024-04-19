@@ -13,7 +13,7 @@ def functionOne():
 def functionTwo(param1):
     pass
 
-def functionThree(param1 = "Default Value"):
+def damageoutput(punchDamage):
     pass
 
 def powerPunch(punchSpeed, punchPower, target):
@@ -30,7 +30,7 @@ def powerPunch(punchSpeed, punchPower, target):
     
 
     
-    print('Where do you want to hit your opponent?\n')
+print('Where do you want to hit your opponent?\n')
 
 
 
@@ -55,11 +55,21 @@ if powerPunch == "head":
     print('You swung for your opponents head')
     print(f'This is your punch power--> {punchPower}')
     print(f'This is your punch speed--> {punchSpeed}')
-    powerPunch(punchSpeed, punchPower, "head")
 else: 
     punchPower = random.randint(1, 10)
     punchSpeed = random.randint(1, 10)
     print('You threw a shot at your opponents body')
     print(f'This is your punch power--> {punchPower}')
     print(f'This is your punch speed--> {punchSpeed}')
+
+if punchPower >= 9 and punchSpeed >= 6 and target == 'head':
+        knockDown = True
+        knockOut = True
+        print('You landed a perfect punch and knocked your opponent out!')
+elif punchPower >= 7 and punchSpeed >= 6 and target == 'head':
+        knockDown = True
+        print('You have knocked your opponent down!')
+else:
+        knockDown = False
+        print('You did not land your power punch.')
 
