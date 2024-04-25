@@ -1,22 +1,21 @@
-#Final Project, Christian Ortiz, v0.0s
-import sys, random, pygame
+import pygame
+from sys import exit
+screen = pygame.display.set_mode((800,400))
+pygame.display.set_caption('lobotomy dash')
+clock = pygame.time.clock()
 
-resolution = 0  # 0 = low resolution(800, 600), 1 = high resolution (1920, 1080).
+background = pygame.image.load('Gdbackground.png')
+playbutton = pygame.image.load('')
+character = pygame.image.load('')
 
-if resolution == 0:
-    x = 800
-    y = 600
-else:
-    x = 1920
-    y = 1080 
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            exit()
 
-pygame.init()
+    screen.blit(background,(0,0))
+    screen.blit(character(0,0))
 
-difficulty = int(input("Please type the exact name of the level you would like to play.\n"))
-
-if difficulty == 'Stereo Madness':
-    pygame.display.set_caption('Stereo Madness')
-else:
-    pygame.display.set_caption('Lobotomy wave')
-
-screen = pygame.display.set_mode((x, y))
+    pygame.display.update()
+    clock.tick(60)
