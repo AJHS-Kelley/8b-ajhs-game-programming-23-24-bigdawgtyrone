@@ -6,7 +6,7 @@ clock = pygame.time.Clock()
 
 background = pygame.image.load('gdbackground_V1.png')
 # playbutton = pygame.image.load('')
-character = pygame.image.load('lobotomy.jpg')
+character = pygame.image.load('newlobotomy.png')
 
 while True:
     for event in pygame.event.get():
