@@ -4,8 +4,7 @@ screen = pygame.display.set_mode((800,400))
 pygame.display.set_caption('lobotomy dash')
 clock = pygame.time.Clock()
 
-background = pygame.image.load('GD background.png')
-pygame.surface.Surface('GD background.png',(200, 200))
+background = pygame.image.load('gdbackground_V1.png')
 # playbutton = pygame.image.load('')
 # character = pygame.image.load('')
 
