@@ -2,11 +2,12 @@ import pygame
 from sys import exit
 screen = pygame.display.set_mode((800,400))
 pygame.display.set_caption('lobotomy dash')
-clock = pygame.time.clock()
+clock = pygame.time.Clock()
 
-background = pygame.image.load('Gdbackground.png')
-playbutton = pygame.image.load('')
-character = pygame.image.load('')
+background = pygame.image.load('GD background.png')
+pygame.surface.Surface('GD background.png',(200, 200))
+# playbutton = pygame.image.load('')
+# character = pygame.image.load('')
 
 while True:
     for event in pygame.event.get():
@@ -15,7 +16,8 @@ while True:
             exit()
 
     screen.blit(background,(0,0))
-    screen.blit(character(0,0))
+    # screen.blit(playbutton(0,0))
+    # screen.blit(character(0,0))
 
     pygame.display.update()
     clock.tick(60)
