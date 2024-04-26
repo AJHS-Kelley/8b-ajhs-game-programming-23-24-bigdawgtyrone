@@ -6,7 +6,7 @@ clock = pygame.time.Clock()
 
 background = pygame.image.load('gdbackground_V1.png')
 # playbutton = pygame.image.load('')
-# character = pygame.image.load('')
+character = pygame.image.load('lobotomy.jpg')
 
 while True:
     for event in pygame.event.get():
@@ -15,8 +15,8 @@ while True:
             exit()
 
     screen.blit(background,(0,0))
-    # screen.blit(playbutton(0,0))
-    # screen.blit(character(0,0))
+    #screen.blit(playbutton,(0,0))
+    screen.blit(character,(300,100))
 
     pygame.display.update()
     clock.tick(60)
