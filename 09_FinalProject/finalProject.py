@@ -15,8 +15,10 @@ while True:
             exit()
 
     screen.blit(background,(0,0))
-    #screen.blit(playbutton,(0,0))
+    # screen.blit(playbutton,(0,0))
     screen.blit(character,(300,100))
 
     pygame.display.update()
     clock.tick(60)
+
+
