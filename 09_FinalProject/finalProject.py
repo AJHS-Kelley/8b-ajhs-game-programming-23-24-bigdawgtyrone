@@ -1,6 +1,7 @@
 import pygame
 from sys import exit
 screen = pygame.display.set_mode((800,400))
+# pygame.font.Font('')
 pygame.display.set_caption('lobotomy dash')
 clock = pygame.time.Clock()
 
@@ -20,5 +21,9 @@ while True:
 
     pygame.display.update()
     clock.tick(60)
+    pass
 
 
+if event.type == pygame.MOUSEBUTTONDOWN:
+        if gdpb_rect.collidepoint(event.pos):
+            game_active = True
