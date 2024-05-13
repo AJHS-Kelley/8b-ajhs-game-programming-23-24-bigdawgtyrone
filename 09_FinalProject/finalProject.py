@@ -27,3 +27,10 @@ while True:
 if event.type == pygame.MOUSEBUTTONDOWN:
         if gdpb_rect.collidepoint(event.pos):
             game_active = True
+if game_active == True:
+    screen = screen2
+    screen.blit(background, (0,0))
+    screen.blit(newlobotomy.png (300,130))
+    screen.blit()
+    screen.blit()
+    level_name = font2.render('Lobotomy dash', False, WHITE)
